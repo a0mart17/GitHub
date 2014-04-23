@@ -78,7 +78,8 @@ namespace GamesVille.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName };
+                var user = new ApplicationUser() { UserName = model.UserName, Membership=model.Membership, Address=model.Address,City=model.City,State=model.State, ZipCode=model.ZipCode,PhoneNumber=model.PhoneNumber };
+                
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

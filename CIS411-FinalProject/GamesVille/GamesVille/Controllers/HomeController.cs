@@ -61,6 +61,7 @@ namespace GamesVille.Controllers
                 games = games.Where(x => x.Category == category);
             }
 
+            ViewData["Category"] = category;
             return View(games);
         }
 

@@ -26,6 +26,26 @@ namespace GamesVille.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
+        [Required]
+        [Display(Name = "Membership Type")]
+        public int Membership { get; set; }
+        [Required]
+        [Display(Name = "Address (Include Apt or Unit#)")]
+        public string Address { get; set; }
+        [Required]
+        [Display(Name = "City")]
+        public string City { get; set; }
+        [Required]
+        public string State { get; set; }
+        [Required]
+        [Display(Name = "Zip Code")]
+        public string ZipCode { get; set; }
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
     }
 
     public class LoginViewModel
@@ -59,5 +79,24 @@ namespace GamesVille.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Membership Type")]
+        public int Membership { get; set; }
+        [Required]
+        [Display(Name = "Address (Include Apt or Unit#)")]
+        public string Address { get; set; }
+        [Required]
+        [Display(Name = "City")]
+        public string City { get; set; }
+        [Required]
+        public string State { get; set; }
+        [Required]
+        [Display(Name = "Zip Code")]
+        public string ZipCode { get; set; }
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
     }
 }
