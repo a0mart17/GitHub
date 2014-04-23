@@ -28,23 +28,6 @@ namespace GamesVille.Models
         public string ConfirmPassword { get; set; }
 
 
-        [Required]
-        [Display(Name = "Membership Type")]
-        public int Membership { get; set; }
-        [Required]
-        [Display(Name = "Address (Include Apt or Unit#)")]
-        public string Address { get; set; }
-        [Required]
-        [Display(Name = "City")]
-        public string City { get; set; }
-        [Required]
-        public string State { get; set; }
-        [Required]
-        [Display(Name = "Zip Code")]
-        public string ZipCode { get; set; }
-        [Required]
-        [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
 
     }
 
@@ -99,4 +82,16 @@ namespace GamesVille.Models
         public string PhoneNumber { get; set; }
 
     }
+
+    public class RolesModel
+    {
+        [Required]
+        [Display(Name = "RoleID")]
+        public int id { get; set; }
+
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+    }
+
 }

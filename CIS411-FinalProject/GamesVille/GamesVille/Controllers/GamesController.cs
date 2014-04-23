@@ -15,6 +15,7 @@ namespace GamesVille.Controllers
         private GameDBContext db = new GameDBContext();
 
         // GET: /Games/
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.Games.ToList());

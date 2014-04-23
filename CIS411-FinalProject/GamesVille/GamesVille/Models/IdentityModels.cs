@@ -1,6 +1,19 @@
 ﻿using GamesVille.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
+using Microsoft.AspNet.Identity;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.ModelConfiguration.Configuration;
+using System.Data.Entity.Validation;
+using System.Globalization;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace GamesVille.Models
 {
@@ -17,9 +30,24 @@ namespace GamesVille.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        
+
         public ApplicationDbContext()
             : base("DefaultConnection")
         {
         }
+
+        //public DbSet<IdentityUserRole> UserRoles { get; set; }
+        //public DbSet<IdentityUserClaim> Claims { get; set; }
+        //public DbSet<IdentityUserLogin> Logins { get; set; }
+
+        //public ApplicationDbContext(string name)
+        //{
+        //    // TODO: Complete member initialization
+        //    this.name = name;
+        //}
+
+
+        
     }
 }
